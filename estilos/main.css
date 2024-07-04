@@ -129,6 +129,8 @@ header {
 .imagen-matricula-container img {
     width: 80%;
     max-width: 600px;
+    margin-top: auto;
+    margin-bottom: 100px;
 }
 
 .imagen-acercade-container {
@@ -140,4 +142,20 @@ header {
 .imagen-acercade-container img {
     width: 80%;
     max-width: 600px;
+}
+
+.titulo-acercade h2 {
+
+    margin-bottom: 10px; /* Margen inferior */
+    text-align: center;
+    color: aliceblue;
+
+}
+
+.titulo-requisito-matricula h3 {
+
+    margin-bottom: 30px; /* Margen inferior */
+    text-align: center;
+    color: aliceblue;
+
 }
