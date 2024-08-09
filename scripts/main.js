@@ -16,28 +16,50 @@ document.getElementById("closeMenu").addEventListener("click", function() {
     menu.style.left = "-250px"; // Oculta el menú
 });
 
-
-
 document.getElementById("inicio").addEventListener("click", function() {
     location.reload(); // Recarga la página
 });
 
+function toggleAccordion(sectionId) {
+    var contentRequisitos = document.getElementById('contentRequisitosFooter');
+    var contentAcerca = document.getElementById('contentAcercaFooter');
+
+    if (sectionId === 'requisitos') {
+        if (contentRequisitos.style.display === 'block') {
+            contentRequisitos.style.display = 'none'; // Cierra si ya está abierto
+        } else {
+            contentRequisitos.style.display = 'block';
+            contentAcerca.style.display = 'none';
+        }
+    } else if (sectionId === 'acerca') {
+        if (contentAcerca.style.display === 'block') {
+            contentAcerca.style.display = 'none'; // Cierra si ya está abierto
+        } else {
+            contentAcerca.style.display = 'block';
+            contentRequisitos.style.display = 'none';
+        }
+    }
+}
+
 document.getElementById("requisitosMatricula").addEventListener("click", function(event) {
     event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-    var titulorequisitomatricula = document.getElementById("titulorequisitomatricula");
-    var titulorequisitomatriculaPosition = titulorequisitomatricula.offsetTop;
-    window.scrollTo({
-        top: titulorequisitomatriculaPosition,
-        behavior: 'smooth'
-    });
+    toggleAccordion('requisitos');
+    document.querySelector(".accordion").scrollIntoView({ behavior: 'smooth' });
 });
 
 document.getElementById("acercade").addEventListener("click", function(event) {
     event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-    var tituloacercade = document.getElementById("tituloacercade");
-    var tituloacercadePosition = tituloacercade.offsetTop;
-    window.scrollTo({
-        top: tituloacercadePosition,
-        behavior: 'smooth'
-    });
+    toggleAccordion('acerca');
+    document.querySelector(".accordion").scrollIntoView({ behavior: 'smooth' });
 });
+
+document.getElementById("toggleRequisitosFooter").addEventListener("click", function(event) {
+    event.preventDefault();
+    toggleAccordion('requisitos');
+});
+
+document.getElementById("toggleAcercaFooter").addEventListener("click", function(event) {
+    event.preventDefault();
+    toggleAccordion('acerca');
+});
+

@@ -13,13 +13,13 @@
             <img src="imagenes/h4.png" alt="Ejemplo" id="miImagen">
         </div>
         <div class="titulo">
-            Te ha llegado la carta del búho?
+            ¿Te ha llegado la carta del búho?
         </div>
         <div class="menu-icon" id="menuIcon">
             <img src="imagenes/icono_hamburguesa.webp" alt="Menú">
         </div>
     </header>
-   
+
     <nav id="menuDesplegable" class="menu-desplegable">
         <div class="menu-header"> 
             <div class="menu-title">
@@ -43,25 +43,29 @@
         </video>
     </div>
 
-    <div id="titulorequisitomatricula" class="titulo-requisito-matricula">
-        <h3>Requisitos de matricula</h3>
-        <h3>Lee con atencion todos los puntos</h3>
+    <!-- Acordeón al final de la página -->
+<!-- Acordeón -->
+<div class="accordion">
+    <div id="toggleRequisitosFooter" class="accordion-header">Requisitos de Matrícula</div>
+    <div id="contentRequisitosFooter" class="accordion-content">
+        <!-- Contenido de Requisitos de Matrícula -->
+        <div id="tituloRequisitosFooter">
+            <h3>Lee con atención todos los puntos</h3>
+        </div>
+        <img src="imagenes/requisitos.png" alt="Requisitos" id="imagenMatriculaFooter">
     </div>
-
-    <div id="imagenMatriculaContainer" class="imagen-matricula-container" style="display: block;">
-        <img src="imagenes/requisitos.png" alt="Requisitos" id="imagenMatricula">
+    <div id="toggleAcercaFooter" class="accordion-header">Acerca de</div>
+    <div id="contentAcercaFooter" class="accordion-content">
+        <!-- Contenido de Acerca de -->
+        <div id="tituloAcercaFooter">
+            <h2>Información importante</h2>
+        </div>
+        <img src="imagenes/acerca.png" alt="Acerca de" id="imagenAcercaFooter">
     </div>
+</div>
 
-
-    <div id="tituloacercade" class="titulo-acercade">
-        <h2>Acerca de</h2>
-        <h2>Información importante</h2>
-    </div>
-
-    <div id="imagenacercadeContainer" class="imagen-acercade-container" style="display: block;">
-        <img src="imagenes/acerca.png" alt="Acerca de" id="imagenacercade">
-    </div>
 
     <script src="scripts/main.js"></script>
 </body>
 </html>
+
